@@ -75,6 +75,7 @@ class LearningPaths {
   }
 }
 
+
 const cursoGratisProgramacionBasica = new Course({
   name : 'Curso de programación básica',
   rate : 10
