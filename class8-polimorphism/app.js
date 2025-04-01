@@ -28,16 +28,16 @@ class Student {
     this.approvedCourses = approvedCourses || [];
     this.learningPaths = learningPaths || [];
   }
-  publicarComentario(coment){
-    const studentComent = new Coments({
+  publicarComentario(comment){
+    const studentComment = new Comments({
       studentName : this.name,
-      content : coment
+      content : comment
   })
-  studentComent.publicar()
+  studentComment.publicar()
   }
 }
 
-class Coments {
+class Comments {
   constructor({content, studentName, studentRole}){
     this.content = content
     this.studentName = studentName
@@ -162,13 +162,13 @@ class TeacherStudent extends Student {
     this.approvedCourses.push(newCourse)
     console.log(`${newCourse.name} añadido a lista de cursos satisfactoriamente.`)
   }
-  publicarComentario(coment){
-    const studentComent = new Coments({
+  publicarComentario(comment){
+    const studentComment = new Comments({
       studentName : this.name,
       studentRole : 'profesor',
-      content : coment
+      content : comment
   })
-  studentComent.publicar()
+  studentComment.publicar()
   }
 
 }
